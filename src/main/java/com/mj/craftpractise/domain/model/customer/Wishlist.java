@@ -1,4 +1,4 @@
-package mj.craftpractise.domain.model.customer;
+package com.mj.craftpractise.domain.model.customer;
 
 public class Wishlist {
     

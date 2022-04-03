@@ -1,4 +1,4 @@
-package mj.craftpractise.domain.model.goods;
+package com.mj.craftpractise.domain.model.goods;
 
 public class GoodsQuestAnswer {
     
@@ -12,6 +12,6 @@ public class GoodsQuestAnswer {
     private String answerId;
     private String answerDate;
     
-    private boolean deleteYn // 삭제여부
+    private boolean deleteYn; // 삭제여부
     
 }

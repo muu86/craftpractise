@@ -1,4 +1,4 @@
-package mj.craftpractise.domain.model.goods;
+package com.mj.craftpractise.domain.model.goods;
 
 public class GoodsQuest {
     
@@ -24,7 +24,7 @@ public class GoodsQuest {
     private int inquiryCnt; // 조회수
     private int answerCnt;  // 답변수
     
-    private boolean deleteYn // 삭제여부
-    private boolean secretYn    // 비밀글
+    private boolean deleteYn; // 삭제여부
+    private boolean secretYn;    // 비밀글
     
 }

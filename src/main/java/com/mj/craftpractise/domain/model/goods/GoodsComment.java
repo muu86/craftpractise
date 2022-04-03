@@ -18,6 +18,6 @@ public class GoodsComment {
     
     private boolean photoYn;
     
-    private String info;
+    private String description;
     
 }

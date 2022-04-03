@@ -1,4 +1,4 @@
-package mj.craftpractise.web.param;
+package com.mj.craftpractise.web.payload;
 
 public class BaseParam {
     

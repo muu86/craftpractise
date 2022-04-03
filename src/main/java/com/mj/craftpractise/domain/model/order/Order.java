@@ -1,4 +1,4 @@
-package mj.craftpractise.domain.model.order;
+package com.mj.craftpractise.domain.model.order;
 
 public class Order {
     
