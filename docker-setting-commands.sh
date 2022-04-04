@@ -14,3 +14,6 @@ arm64v8/mysql:8-oracle
 docker run -p 8081:8081 --network craftpractise-mysql \
 -e spring_profiles_active=dockertest \
 --name craftpractise craftpractise:docker-test
+
+# craftpracitse-local mysql docker
+docker run --name craftpractise-local -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0-oracle

@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class AddGoodPayload {
+public class AddGoodsPayload {
 
     @Size(min = 1, max = 50, message = "상품 이름은 1 ~ 50글자 사이로 입력해주세요.")
     @NotNull

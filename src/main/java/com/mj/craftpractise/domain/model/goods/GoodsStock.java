@@ -1,6 +1,6 @@
-package mj.craftpractise.domain.model.goods;
+package com.mj.craftpractise.domain.model.goods;
 
-public class Stock {
+public class GoodsStock {
     
     private Long goodsCode;
     private Long goodsDtCode;
