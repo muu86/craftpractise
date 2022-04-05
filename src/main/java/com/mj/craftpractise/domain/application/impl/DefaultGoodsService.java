@@ -1,13 +1,17 @@
 package com.mj.craftpractise.domain.application.impl;
 
 import com.mj.craftpractise.domain.application.GoodsService;
+import com.mj.craftpractise.domain.application.command.AddGoodsCategoryCommand;
 import com.mj.craftpractise.domain.application.command.AddGoodsCommand;
 import com.mj.craftpractise.domain.model.goods.Goods;
+import com.mj.craftpractise.domain.model.goods.GoodsCategory;
 import com.mj.craftpractise.domain.model.goods.GoodsManagement;
+import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class DefaultGoodsService implements GoodsService {
 
@@ -15,11 +19,15 @@ public class DefaultGoodsService implements GoodsService {
 
     @Override
     public Goods addGoods(AddGoodsCommand command) {
-        return goodsManagement.addGoods(
-            command.getGoodsName(),
-            command.getDescription(),
-            command.getOrderMinQty(),
-            command.getOrderMaxQty()
-        );
+        return goodsManagement.addGoods(command);
     }
+
+    /**
+     * @param command
+     * @return
+     */
+//    @Override
+//    public GoodsCategory addGoodsCategory(AddGoodsCategoryCommand command) {
+//        return goodsManagement.addGoodsCategory(command);
+//    }
 }

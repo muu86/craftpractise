@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 public class GoodsCategoryId implements Serializable {
 
     @Column(name = "l_cate")
-    private int lCate;
+    private Integer lCate;
 
     @Column(name = "m_cate")
-    private int mCate;
+    private Integer mCate;
 
     @Column(name = "s_cate")
-    private int sCate;
+    private Integer sCate;
 
     @Column(name = "d_cate")
-    private int dCate;
+    private Integer dCate;
 
 }

@@ -17,7 +17,7 @@ public class GoodsAndGoodsCategoryId implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "goods_id")
-    private Long goodsId;
+    private Goods goods;
 
     @MapsId("GoodsCategory")
     @ManyToOne
