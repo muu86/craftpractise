@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode
-public class AddGoodsCategoryCommand {
+public class AddCategoryCommand {
 
     private Integer lCate;
     private Integer MCate;
@@ -22,8 +22,8 @@ public class AddGoodsCategoryCommand {
     private String sCateName;
     private String dCateName;
 
-    private LocalDateTime createdAt;
-    private String createdBy;
-    private LocalDateTime modifiedAt;
-    private String modifiedBy;
+//    private LocalDateTime createdAt;
+//    private String createdBy;
+//    private LocalDateTime modifiedAt;
+//    private String modifiedBy;
 }

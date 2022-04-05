@@ -5,10 +5,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface GoodsCategoryRepository extends JpaRepository<GoodsCategory, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     @Query("select "
-        + "max(t.lCate) + 1 "
-        + "from GoodsCategory t")
-    Integer getNextLCate();
+        + "case "
+        + "when (max(t.lCate) is null) then 1 "
+        + "else (max(t.lCate) + 1) "
+        + "end "
+        + "from Category t")
+    int getNextLCate();
 }

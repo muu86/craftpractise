@@ -1,10 +1,8 @@
 package com.mj.craftpractise.domain.application.impl;
 
 import com.mj.craftpractise.domain.application.GoodsService;
-import com.mj.craftpractise.domain.application.command.AddGoodsCategoryCommand;
 import com.mj.craftpractise.domain.application.command.AddGoodsCommand;
 import com.mj.craftpractise.domain.model.goods.Goods;
-import com.mj.craftpractise.domain.model.goods.GoodsCategory;
 import com.mj.craftpractise.domain.model.goods.GoodsManagement;
 import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

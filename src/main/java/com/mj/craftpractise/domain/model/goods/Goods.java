@@ -27,12 +27,12 @@ public class Goods {
     @Column(nullable = false, length = 300)
     private String description; // 상품 상세 설명
 
-    @OneToMany(mappedBy = "goodsAndGoodsCategoryId.goods", cascade = CascadeType.ALL)
-    private List<GoodsAndGoodsCategory> goodsAndGoodsCategory = new ArrayList<>();
+    @OneToMany(mappedBy = "goods", cascade = CascadeType.ALL)
+    private List<GoodsCategory> goodsCategories = new ArrayList<>();
 
     // 신상품, 베스트, 추천, 주문폭주 등등
     @OneToMany(mappedBy = "goods", cascade = CascadeType.ALL)
-    List<GoodsAndGoodsBadge> goodsBadges = new ArrayList<>();
+    List<GoodsBadge> goodsBadges = new ArrayList<>();
 
     @Column(nullable = true)
     private Integer orderMinQty;

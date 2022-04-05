@@ -116,3 +116,7 @@ apiController -> Service -> Management(facade) -> repository
                             └── goods
                                 └── GoodsTest.java
 ```
+
+### 공부할 것
+custom validation
+- https://markoantic.medium.com/conditional-validation-in-java-applications-80a24f06d721
