@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class ApiResult extends HashMap<String, Object> {
 
     private static final String MESSAGE_KEY = "message";
-    private static final String ERROR_CODE_KEY = "errorCode";
+    private static final String ERROR_MESSAGE_KEY = "error";
 
     private ApiResult() {}
 
@@ -16,6 +16,12 @@ public class ApiResult extends HashMap<String, Object> {
     public static ApiResult message(String message) {
         ApiResult apiResult = new ApiResult();
         apiResult.put(MESSAGE_KEY, message);
+        return apiResult;
+    }
+
+    public static ApiResult error(String message) {
+        ApiResult apiResult = new ApiResult();
+        apiResult.put(ERROR_MESSAGE_KEY, message);
         return apiResult;
     }
 

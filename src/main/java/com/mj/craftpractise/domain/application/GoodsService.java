@@ -7,5 +7,5 @@ public interface GoodsService {
 
     Goods addGoods(AddGoodsCommand command);
 
-//    GoodsCategory addGoodsCategory(AddGoodsCategoryCommand command);
+//    Goodscategory addGoodscategory(AddGoodscategoryCommand command);
 }

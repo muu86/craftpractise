@@ -1,4 +1,4 @@
-package com.mj.craftpractise.domain.model.goods;
+package com.mj.craftpractise.domain.model.category;
 
 import java.io.Serializable;
 import lombok.EqualsAndHashCode;

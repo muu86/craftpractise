@@ -25,7 +25,7 @@ public class DefaultGoodsService implements GoodsService {
      * @return
      */
 //    @Override
-//    public GoodsCategory addGoodsCategory(AddGoodsCategoryCommand command) {
-//        return goodsManagement.addGoodsCategory(command);
+//    public Goodscategory addGoodscategory(AddGoodscategoryCommand command) {
+//        return goodsManagement.addGoodscategory(command);
 //    }
 }

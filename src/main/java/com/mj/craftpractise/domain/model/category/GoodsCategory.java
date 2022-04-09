@@ -1,6 +1,7 @@
-package com.mj.craftpractise.domain.model.goods;
+package com.mj.craftpractise.domain.model.category;
 
 import com.mj.craftpractise.domain.common.model.AbstractBaseEntity;
+import com.mj.craftpractise.domain.model.goods.Goods;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;

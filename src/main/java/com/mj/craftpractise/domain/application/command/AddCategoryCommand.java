@@ -1,26 +1,26 @@
 package com.mj.craftpractise.domain.application.command;
 
-import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @AllArgsConstructor
-@Getter
+@Getter @Setter
 @ToString
 @EqualsAndHashCode
 public class AddCategoryCommand {
 
-    private Integer lCate;
-    private Integer MCate;
-    private Integer sCate;
-    private Integer dCate;
+    private Integer lcateCode;
+    private Integer mcateCode;
+    private Integer scateCode;
+    private Integer dcateCode;
 
-    private String lCateName;
-    private String mCateName;
-    private String sCateName;
-    private String dCateName;
+    private String lcateName;
+    private String mcateName;
+    private String scateName;
+    private String dcateName;
 
 //    private LocalDateTime createdAt;
 //    private String createdBy;

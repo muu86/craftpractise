@@ -1,9 +1,9 @@
 package com.mj.craftpractise.domain.application;
 
 import com.mj.craftpractise.domain.application.command.AddCategoryCommand;
-import com.mj.craftpractise.domain.model.goods.Category;
+import com.mj.craftpractise.domain.model.category.Category;
 
 public interface CategoryService {
 
-    Category addCategory(AddCategoryCommand command);
+    Category addcategory(AddCategoryCommand command);
 }

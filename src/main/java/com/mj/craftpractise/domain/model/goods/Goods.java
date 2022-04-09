@@ -1,5 +1,6 @@
 package com.mj.craftpractise.domain.model.goods;
 
+import com.mj.craftpractise.domain.model.category.GoodsCategory;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -14,7 +15,6 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@ToString
 @Setter // 테스트용
 public class Goods {
 
