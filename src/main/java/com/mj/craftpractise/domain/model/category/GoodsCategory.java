@@ -26,4 +26,5 @@ public class GoodsCategory extends AbstractBaseEntity {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
 }

@@ -1,6 +1,8 @@
 package com.mj.craftpractise.web.payload;
 
 import com.mj.craftpractise.domain.application.command.AddGoodsCommand;
+import com.mj.craftpractise.domain.model.category.Category;
+import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
@@ -19,11 +21,13 @@ public class AddGoodsPayload {
     @Size(max = 200, message = "상품 정보는 200 이하로 입력해주세요.")
     private String description;
 
+    private List<Category> categories;
+
     private int orderMinQty;
 
     private int orderMaxQty;
 
     public AddGoodsCommand toCommand() {
-        return new AddGoodsCommand(goodsName, description, orderMinQty, orderMaxQty);
+        return new AddGoodsCommand(goodsName, description, categories, orderMinQty, orderMaxQty);
     }
 }

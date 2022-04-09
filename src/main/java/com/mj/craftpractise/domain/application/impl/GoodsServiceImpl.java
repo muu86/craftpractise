@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class DefaultGoodsService implements GoodsService {
+public class GoodsServiceImpl implements GoodsService {
 
     private final GoodsManagement goodsManagement;
 

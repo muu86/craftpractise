@@ -13,8 +13,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @Slf4j
 public class AdminExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler({CategoryCreationException.class})
-    protected ResponseEntity<ApiResult> handle(CategoryCreationException ex) {
+    @ExceptionHandler({Exception.class})
+    protected ResponseEntity<ApiResult> handle(Exception ex) {
         ApiResult apiResult = ApiResult.error(ex.getMessage());
         return ResponseEntity.badRequest().body(apiResult);
     }

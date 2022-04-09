@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class DefaultCategoryService implements CategoryService {
+public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryManagement categoryManagement;
 

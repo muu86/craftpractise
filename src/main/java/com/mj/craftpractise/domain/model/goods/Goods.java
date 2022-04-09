@@ -59,4 +59,5 @@ public class Goods {
         goods.orderMaxQty = orderMaxQty;
         return goods;
     }
+
 }
