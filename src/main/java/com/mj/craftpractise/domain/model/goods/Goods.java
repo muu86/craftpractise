@@ -1,6 +1,8 @@
 package com.mj.craftpractise.domain.model.goods;
 
+import com.mj.craftpractise.domain.common.model.AbstractBaseEntity;
 import com.mj.craftpractise.domain.model.category.GoodsCategory;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -16,7 +18,7 @@ import lombok.ToString;
 @Entity
 @Getter
 @Setter // 테스트용
-public class Goods {
+public class Goods extends AbstractBaseEntity {
 
     @Id @GeneratedValue
     private Long id;
@@ -32,7 +34,7 @@ public class Goods {
 
     // 신상품, 베스트, 추천, 주문폭주 등등
     @OneToMany(mappedBy = "goods", cascade = CascadeType.ALL)
-    List<GoodsBadge> goodsBadges = new ArrayList<>();
+    private List<GoodsBadge> goodsBadges = new ArrayList<>();
 
     @Column(nullable = true)
     private Integer orderMinQty;
@@ -57,6 +59,8 @@ public class Goods {
         goods.description = description;
         goods.orderMinQty = orderMinQty;
         goods.orderMaxQty = orderMaxQty;
+        goods.createdAt = LocalDateTime.now();
+        goods.modifiedAt = LocalDateTime.now();
         return goods;
     }
 

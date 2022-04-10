@@ -1,7 +1,6 @@
 package com.mj.craftpractise.domain.application.command;
 
-import com.mj.craftpractise.domain.model.category.Category;
-import com.mj.craftpractise.domain.model.category.GoodsCategory;
+import com.mj.craftpractise.domain.model.goods.Badge;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,6 +17,8 @@ public class AddGoodsCommand {
     private String description;
 
     private List<CategoryCommand> categories;
+
+    private List<Badge> badges;
 
     private Integer orderMinQty;
     private Integer orderMaxQty;

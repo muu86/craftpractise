@@ -20,12 +20,4 @@ public class GoodsServiceImpl implements GoodsService {
         return goodsManagement.addGoods(command);
     }
 
-    /**
-     * @param command
-     * @return
-     */
-//    @Override
-//    public Goodscategory addGoodscategory(AddGoodscategoryCommand command) {
-//        return goodsManagement.addGoodscategory(command);
-//    }
 }

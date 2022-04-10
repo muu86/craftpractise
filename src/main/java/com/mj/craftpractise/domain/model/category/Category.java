@@ -1,6 +1,8 @@
 package com.mj.craftpractise.domain.model.category;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mj.craftpractise.domain.common.model.AbstractBaseEntity;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -23,9 +25,6 @@ import lombok.ToString;
  */
 @Entity
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString(exclude = {"goodscategories"})
 public class Category extends AbstractBaseEntity {
 
     @Id @GeneratedValue
@@ -60,26 +59,20 @@ public class Category extends AbstractBaseEntity {
 
     private boolean useYn;
 
-    public void changeLcate(int lcateCode) {
-        this.lcateCode = lcateCode;
-    }
-
-    public void setMcate(int mcateCode) {
-        this.mcateCode = mcateCode;
-    }
-
-    public void changeScate(int scateCode) {
-        this.scateCode = scateCode;
-    }
-
-    public void changeDcate(int dcateCode) {
-        this.dcateCode = dcateCode;
-    }
-
     public static Category craeteAddCategory(Integer lcateCode, Integer mcateCode, Integer scateCode, Integer dcateCode,
                                     String lcateName, String mcateName, String scateName, String dcateName) {
-        return new Category(null, lcateCode, mcateCode, scateCode, dcateCode,
-                                    lcateName, mcateName, scateName, dcateName, null, true);
+        Category category = new Category();
+        category.lcateCode = lcateCode;
+        category.mcateCode = mcateCode;
+        category.scateCode = scateCode;
+        category.dcateCode = dcateCode;
+        category.lcateName = lcateName;
+        category.mcateName = mcateName;
+        category.scateName = scateName;
+        category.dcateName = dcateName;
+        category.createdAt = LocalDateTime.now();
+        category.modifiedAt = LocalDateTime.now();
+        return category;
     }
 
 }

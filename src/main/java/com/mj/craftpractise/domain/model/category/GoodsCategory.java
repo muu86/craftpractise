@@ -2,6 +2,7 @@ package com.mj.craftpractise.domain.model.category;
 
 import com.mj.craftpractise.domain.common.model.AbstractBaseEntity;
 import com.mj.craftpractise.domain.model.goods.Goods;
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -31,6 +32,8 @@ public class GoodsCategory extends AbstractBaseEntity {
         GoodsCategory goodsCategory = new GoodsCategory();
         goodsCategory.goods = goods;
         goodsCategory.category = category;
+        goodsCategory.createdAt = LocalDateTime.now();
+        goodsCategory.modifiedAt = LocalDateTime.now();
         return goodsCategory;
     }
 }

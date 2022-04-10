@@ -1,5 +1,6 @@
-package com.mj.craftpractise.domain.model.category;
+package com.mj.craftpractise.domain.model.category.repository;
 
+import com.mj.craftpractise.domain.model.category.Category;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

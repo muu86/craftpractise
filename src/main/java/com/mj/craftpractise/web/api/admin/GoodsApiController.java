@@ -27,4 +27,5 @@ public class GoodsApiController {
         Goods result = goodsService.addGoods(addGoodsCommand);
         return AddGoodsResult.build(result);
     }
+
 }

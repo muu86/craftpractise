@@ -1,8 +1,6 @@
 package com.mj.craftpractise.domain.model.goods;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Optional;
+import com.mj.craftpractise.domain.model.goods.repository.GoodsRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

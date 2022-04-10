@@ -1,7 +1,7 @@
 package com.mj.craftpractise;
 
 import com.mj.craftpractise.domain.model.goods.Goods;
-import com.mj.craftpractise.domain.model.goods.GoodsRepository;
+import com.mj.craftpractise.domain.model.goods.repository.GoodsRepository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;

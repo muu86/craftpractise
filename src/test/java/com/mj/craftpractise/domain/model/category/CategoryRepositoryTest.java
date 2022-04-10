@@ -1,14 +1,10 @@
 package com.mj.craftpractise.domain.model.category;
 
-import java.util.List;
+import com.mj.craftpractise.domain.model.category.repository.CategoryRepository;
 import javax.transaction.Transactional;
-import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.annotation.Rollback;
 
 @DataJpaTest
 class CategoryRepositoryTest {

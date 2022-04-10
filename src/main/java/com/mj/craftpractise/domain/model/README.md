@@ -6,7 +6,9 @@
 - 모든 엔티티가 공유하는 컬럼
 
 ### Goods(상품 테이블)
-- 상품은 여러 카테고리에 속할 수 있다. (다대다 관계 - 상품_카테고리 연결테이블로 해결)
+- 크래프트 프랙티스 앱은 상품에 멀티 카테고리를 설정할 수 있다.
+- `Category` 테이블과 다대다 관계 
+- `GoodsCategory` 연결 테이블로 해결
 
 ### Category(카테고리 테이블)
 - ~~복합키로 구성(lcate, mcate, scate, dcate 4개 컬럼이 pk) => @EmbeddedId~~
@@ -21,3 +23,7 @@
 - ~~Goods, GoodsCategory 에서 @OneToMany mappedBy 설정할 때 `goodsAndGoodscategoryId.goods`, `goodsAndGoodscategoryId.goodscategory` 형식으로 매핑 지정~~
 - `@IdClass`로 수정 (GoodsCategoryId)
 
+### Badge(상품 뱃지 테이블)
+- 주문폭주, 신상품, 베스트, 추천 ..등 상품에 달리는 태그 정보
+- 상품테이블과 다대다 관계
+- `GoodsBadge` 연결테이블로 해결
