@@ -17,7 +17,7 @@ public class AddGoodsCommand {
     private String goodsName;
     private String description;
 
-    private List<Category> categories;
+    private List<CategoryCommand> categories;
 
     private Integer orderMinQty;
     private Integer orderMaxQty;

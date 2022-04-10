@@ -27,4 +27,10 @@ public class GoodsCategory extends AbstractBaseEntity {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    public static GoodsCategory create(Goods goods, Category category) {
+        GoodsCategory goodsCategory = new GoodsCategory();
+        goodsCategory.goods = goods;
+        goodsCategory.category = category;
+        return goodsCategory;
+    }
 }

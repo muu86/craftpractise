@@ -1,7 +1,8 @@
 package com.mj.craftpractise.web.payload;
 
 import com.mj.craftpractise.domain.application.command.AddGoodsCommand;
-import com.mj.craftpractise.domain.model.category.Category;
+import com.mj.craftpractise.domain.application.command.CategoryCommand;
+import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -21,13 +22,21 @@ public class AddGoodsPayload {
     @Size(max = 200, message = "상품 정보는 200 이하로 입력해주세요.")
     private String description;
 
-    private List<Category> categories;
+    private List<CategoryPayload> categories;
 
     private int orderMinQty;
 
     private int orderMaxQty;
 
     public AddGoodsCommand toCommand() {
-        return new AddGoodsCommand(goodsName, description, categories, orderMinQty, orderMaxQty);
+        return new AddGoodsCommand(goodsName, description, toCommandList(categories), orderMinQty, orderMaxQty);
+    }
+
+    private List<CategoryCommand> toCommandList(List<CategoryPayload> payloads) {
+        List<CategoryCommand> commands = new ArrayList<>();
+        for (CategoryPayload payload : payloads) {
+            commands.add(payload.toCommand());
+        }
+        return commands;
     }
 }

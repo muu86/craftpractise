@@ -85,6 +85,9 @@ public class CategoryManagement {
     }
 
     private void validate(AddCategoryCommand command) {
+        if (command.getDcateCode() != null) {
+            throw new CategoryCreationException("카테고리 생성 중 오류가 발생했습니다.");
+        }
 
         // 세뷴류(dcate)를 추가하는 경우
         if (command.getScateCode() != null) {

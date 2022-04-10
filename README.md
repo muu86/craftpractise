@@ -117,6 +117,8 @@ apiController -> Service -> Management(facade) -> repository
                                 └── GoodsTest.java
 ```
 
-### 공부할 것
-custom validation
-- https://markoantic.medium.com/conditional-validation-in-java-applications-80a24f06d721
+### 공부
+- custom validation
+  - https://markoantic.medium.com/conditional-validation-in-java-applications-80a24f06d721
+- jpa entity builder pattern
+  - https://thorben-janssen.com/builder-pattern-hibernate/
