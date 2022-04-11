@@ -3,17 +3,14 @@ package com.mj.craftpractise.domain.model.goods;
 import com.mj.craftpractise.domain.application.command.AddGoodsCommand;
 import com.mj.craftpractise.domain.application.command.CategoryCommand;
 import com.mj.craftpractise.domain.model.category.Category;
-import com.mj.craftpractise.domain.model.category.repository.CategoryRepository;
 import com.mj.craftpractise.domain.model.category.GoodsCategory;
+import com.mj.craftpractise.domain.model.category.repository.CategoryRepository;
 import com.mj.craftpractise.domain.model.category.repository.GoodsCategoryRepository;
 import com.mj.craftpractise.domain.model.goods.repository.BadgeRepository;
 import com.mj.craftpractise.domain.model.goods.repository.GoodsBadgeRepository;
 import com.mj.craftpractise.domain.model.goods.repository.GoodsRepository;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -28,6 +25,11 @@ public class GoodsManagement {
 
     private final BadgeRepository badgeRepository;
     private final GoodsBadgeRepository goodsBadgeRepository;
+
+    public List<Goods> getAllGoods() {
+        List<Goods> goods = goodsRepository.findAll();
+        return goods;
+    }
 
     public Goods addGoods(AddGoodsCommand command) {
         Goods goods = Goods.create(command.getGoodsName(),

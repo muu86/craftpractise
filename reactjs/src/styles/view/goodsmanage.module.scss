@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+section {
+    margin: 20px 10px 0px 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $color-info-light;
+    // border: 3px solid purple;
+}
+
+th {
+    height: 50px;
+    letter-spacing: 2px;
+    box-shadow: $box-shadow1;
+}
+
+td {
+    letter-spacing: 1px;
+    height: 50px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody td:nth-child(2) {
+    padding-right: 5px;
+    text-align: right;
+}

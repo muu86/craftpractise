@@ -6,9 +6,11 @@ import com.mj.craftpractise.domain.model.goods.Goods;
 import com.mj.craftpractise.web.payload.AddGoodsPayload;
 import com.mj.craftpractise.web.result.AddGoodsResult;
 import com.mj.craftpractise.web.result.ApiResult;
+import java.util.List;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +22,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class GoodsApiController {
 
     private final GoodsService goodsService;
+
+    @GetMapping("/get-all")
+    public ResponseEntity<ApiResult> getAllGoods() {
+        List<Goods> result = goodsService.getAllGoods();
+        return ResponseEntity.ok(
+            ApiResult.message("상품 조회")
+                .add("goods", result));
+    }
 
     @PostMapping("/add")
     public ResponseEntity<ApiResult> addGoods(@Valid @RequestBody AddGoodsPayload payload) {
